@@ -12,7 +12,11 @@ const PORT = process.env.PORT || 3000;
 const __dirname = path.resolve();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://ctmtraining.onrender.com", "http://localhost:5173"],
+  })
+);
 app.use("/member", memberRouter);
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
