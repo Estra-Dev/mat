@@ -85,7 +85,7 @@ const Survey = ({ newMember, qst, setQst, handleSurvey, oat }) => {
           </div>
           <div className=" flex justify-end gap-3 mt-4">
             <Link to={"/?tab=oat"}></Link>
-            <Button>Continue</Button>
+            <Button type="submit">Continue</Button>
           </div>
         </form>
       </div>

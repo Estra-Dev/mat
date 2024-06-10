@@ -139,7 +139,7 @@ const Home = () => {
             <div className=" px-4">
               <p className=" text-sm">PRESENTS:</p>
               <h1 className=" font-bold text-3xl text-gray-800">
-                Ministers Advancement Training (M.A.T)
+                Ministers/Leaders Advancement Training (M.A.T)
               </h1>
               <p className=" italic text-[14px] mb-6">
                 The one Training for all Ministers, Pastors and Upcoming
