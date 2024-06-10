@@ -3,14 +3,23 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import memberRouter from "./routes/Member.routes.js";
+import path from "path";
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const __dirname = path.resolve();
+
 app.use(express.json());
 app.use(cors());
 app.use("/member", memberRouter);
+
+app.use(express.static(path.join(__dirname, "/client/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+});
 
 try {
   const connect = await mongoose.connect(process.env.MONGO_URL);
