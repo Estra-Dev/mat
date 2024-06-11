@@ -91,7 +91,7 @@ const Home = () => {
         console.log(error);
       }
     }
-    setInProgress(false);
+    // setInProgress(false);
   };
 
   const handleSurvey = async (ev) => {
